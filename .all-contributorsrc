@@ -1,0 +1,30 @@
+{
+  "projectName": "zgz-design-system",
+  "projectOwner": "Ayuntamiento de Zaragoza",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 50,
+  "commit": true,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "SebastianCoceres",
+      "name": "Sebastian Coceres",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46013814?v=4",
+      "profile": "https://sebastiancoceres.dev/",
+      "contributions": [
+        "code",
+        "a11y",
+        "infra",
+        "review",
+        "maintenance",
+        "design"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "linkToUsage": false
+}
