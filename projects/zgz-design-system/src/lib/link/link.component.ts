@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'zgz-link',
@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
   imports: [],
   templateUrl: './link.component.html',
   styleUrl: './link.component.css',
+  encapsulation: ViewEncapsulation.None,
 })
 export class LinkComponent {
   @Input() href: string = '';

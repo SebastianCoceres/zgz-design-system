@@ -9,6 +9,4 @@ import { ContainerComponent } from 'ZgzComponents';
   templateUrl: './app.component.html',
   styleUrls: [],
 })
-export class AppComponent {
-  title = 'zgz-ds-showcase';
-}
+export class AppComponent {}
