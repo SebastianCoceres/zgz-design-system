@@ -59,7 +59,7 @@
             ],
             "styles": [
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-              "https://www.zaragoza.es/cont/assets/css/main-sede_v2.min.css",
+              "projects/zgz-design-system/src/styles.css",
               "projects/zgz-ds-showcase/src/styles.css"
             ],
             "scripts": [],

@@ -6,7 +6,6 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   imports: [],
   templateUrl: './link.component.html',
   styleUrl: './link.component.css',
-  encapsulation: ViewEncapsulation.None,
 })
 export class LinkComponent {
   @Input() href: string = '';

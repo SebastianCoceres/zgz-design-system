@@ -1,14 +1,27 @@
 :host[loading] {
+  opacity: 0.8;
   cursor: wait;
+}
+
+:host[loading] * {
+  pointer-events: none;
+}
+
+.loader {
+  animation: loading 2s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 :host[disabled] {
   cursor: not-allowed;
-}
-
-.btn-loading {
-  opacity: 0.8;
-  pointer-events: none;
 }
 
 [disabled] {

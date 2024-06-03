@@ -2,7 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
@@ -26,6 +26,9 @@
     "paths": {
       "zgz-design-system": [
         "./dist/zgz-design-system"
+      ],
+      "zgzds": [
+        "projects/zgz-design-system/src/*"
       ],
       "ZgzComponents": [
         "projects/zgz-design-system/src/public-api.ts"

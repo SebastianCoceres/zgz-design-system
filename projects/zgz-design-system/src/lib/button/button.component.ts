@@ -1,17 +1,19 @@
+import { NgClass, NgIf, NgStyle } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
-  Renderer2,
+  ElementRef,
   HostBinding,
   Input,
-  ElementRef,
+  Renderer2,
 } from '@angular/core';
-import { NgClass } from '@angular/common';
+import { RemoveAttrsFromSelector } from '../../decorators/RemoveAttrsFromSelector.decorator';
+import { BtnIconPosition, BtnVariants } from './button.types';
 
 @Component({
   selector: 'zgz-button',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgClass, NgStyle, NgIf],
   templateUrl: './button.component.html',
   styleUrl: './button.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -23,27 +25,26 @@ export class ButtonComponent {
   @Input() isBlock: boolean = false;
   @Input() disabled: boolean = false;
   @Input() loading: boolean = false;
+  @Input() loadingIcon: string = 'loader fa-solid fa-spinner';
   @Input() class: string = '';
+  @Input() icon: string = '';
+  @Input() iconOnly: boolean = false;
+  @Input() iconSide: BtnIconPosition = 'left';
+  @Input() style: Record<string, any> = {};
 
   constructor(
     private _elRef: ElementRef,
     private Renderer: Renderer2,
   ) {}
 
-  ngOnInit() {
-    const attributes = Object.getOwnPropertyNames(this);
-    for (let i = 0; i < attributes.length; i++) {
-      this.Renderer.removeAttribute(this._elRef.nativeElement, attributes[i]);
-    }
-  }
-
+  @RemoveAttrsFromSelector()
+  ngOnInit() {}
   classConstructor() {
     const base = { btn: true, [this.class]: true };
     const _class = {
       ...base,
       [`btn-${this.variant}`]: true,
-      'btn-loading': this.loading,
-      'btn-block': this.isBlock,
+      ['btn-block']: this.isBlock,
       [`btn-${this.size}`]: this.size,
     };
 
@@ -51,7 +52,7 @@ export class ButtonComponent {
   }
 
   @HostBinding('class')
-  get hostBlock() {
+  get hostIsBlock() {
     return this.isBlock ? 'w-100' : null;
   }
 
@@ -65,12 +66,3 @@ export class ButtonComponent {
     return this.loading ? true : null;
   }
 }
-
-export type BtnVariants =
-  | 'default'
-  | 'primary'
-  | 'secondary'
-  | 'success'
-  | 'danger'
-  | 'warning'
-  | 'info';

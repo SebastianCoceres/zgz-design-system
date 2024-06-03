@@ -1,3 +1,19 @@
-<button [disabled]="disabled" [type]="type" [ngClass]="classConstructor()">
-  <ng-content>Button</ng-content>
+<button
+  [disabled]="disabled"
+  [type]="type"
+  [attr.data-loading]="loading || null"
+  [ngClass]="classConstructor()"
+  [ngStyle]="style"
+>
+  <span
+    class="px-05"
+    [ngClass]="loading ? loadingIcon : icon"
+    *ngIf="iconSide == 'left' && (icon || loading)"
+  ></span>
+  <ng-content>{{ iconOnly ? null : "Button" }}</ng-content>
+  <span
+    class="px-05"
+    [ngClass]="loading ? loadingIcon : icon"
+    *ngIf="iconSide == 'right' && (icon || loading)"
+  ></span>
 </button>

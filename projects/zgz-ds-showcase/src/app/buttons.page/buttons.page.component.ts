@@ -9,7 +9,13 @@ import { ButtonComponent } from 'ZgzComponents';
   styleUrls: [],
 })
 export class ButtonsPageComponent {
-  log(message: string) {
-    console.log(message);
+  loading: boolean = false;
+
+  onLoading() {
+    this.loading = true;
+
+    setTimeout(() => {
+      this.loading = false;
+    }, 3000);
   }
 }

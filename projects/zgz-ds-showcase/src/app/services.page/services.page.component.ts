@@ -15,6 +15,9 @@ export class ServicesPageComponent implements OnInit {
   constructor(public distritosService: DistritosService) {}
 
   async ngOnInit() {
-    this.distritos = await this.distritosService.getDistrito(1);
+    this.distritos = await this.distritosService.getDistritos({
+      rows: 2,
+      fl: 'title,id,description,geometry',
+    });
   }
 }

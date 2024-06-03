@@ -5,12 +5,11 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Sistema de diseño del Ayuntamiento de Zaragoza](#sistema-de-diseño-del-ayuntamiento-de-zaragoza)
-  - [Descripción](#descripción)
-  - [Comenzando](#comenzando)
-    - [Instalación](#instalación)
-    - [Uso](#uso)
-  - [Contributors ✨](#contributors-)
+- [Descripción](#descripci%C3%B3n)
+- [Comenzando](#comenzando)
+  - [Instalación](#instalaci%C3%B3n)
+  - [Uso](#uso)
+- [Contributors ✨](#contributors-)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
